@@ -24,7 +24,7 @@ view{
 page{
   background-color: #FFFFFF;
   overflow: hidden;
-  height: 10000px;
+  height: 100%;
 }
 /* 头部 */
 .HZL_top{

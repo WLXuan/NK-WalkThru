@@ -3,14 +3,23 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 15px;
-  align-items: center;
   color: rgb(255, 255, 255);
   background-color: #4b0082;
+  height: 80px;
 }
 .header image {
   margin-top: 20px;
   height: 150rpx;
   width: 150rpx;
+}
+.loginin {
+  align-items: center;
+  border-radius: 30rpx;
+  display: flex;
+  margin-top: 20px;
+  width: 140px;
+  height: 50px;
+  text-align: center;
 }
 .my_item {
   display: flex;

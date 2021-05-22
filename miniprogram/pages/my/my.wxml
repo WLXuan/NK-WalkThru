@@ -1,6 +1,10 @@
-<view class="header" wx:for="{{accountList}}">
+<!-- <view class="header" wx:for="{{accountList}}">
   <image src="{{item.avatar}}"></image>
   <text>\n{{item.username}}</text>
+</view> -->
+<view class="header" >
+  <button class="loginin" bindtap="login">点击授权登录</button>
+  <text>{{nickName}}</text>
 </view>
 
 <!-- 我的订单 -->

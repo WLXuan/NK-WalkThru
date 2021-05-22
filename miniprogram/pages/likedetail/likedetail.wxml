@@ -19,9 +19,9 @@
 
 
 <!-- 左右滑动 -->
-<swiper class='HZL_swiper' style='height:{{HZL_height1}}px;margin-top:{{mymarginTop}}px' bindchange="HZL_swiperchange" current="{{HZL_swiper_ID}}">
-<swiper-item wx:for = '{{HZL_categories}}' wx:key = 'id'>
-      <view wx:if = '{{index == HZL_swiper_ID}}' style='height:{{HZL_height1}}px'>
+<swiper class='HZL_swiper' style='height:2000px;margin-top:{{mymarginTop}}px' bindchange="HZL_swiperchange" current="{{HZL_swiper_ID}}">
+  <swiper-item wx:for = '{{HZL_categories}}' wx:key = 'id'>
+    <view wx:if = '{{index == HZL_swiper_ID}}' style='height:{{HZL_height1}}px'>
 
           <!-- 菜单 -->
           <view wx:if = '{{HZL_swiper_ID == 0}}' class='HZL_menu' style='height:{{HZL_height1}}px'>
@@ -77,7 +77,7 @@
           </view>
 
           <!-- 评论 -->
-          <view wx:if = '{{HZL_swiper_ID == 1}}' class='HZL_appraise'>
+          <!-- <view wx:if = '{{HZL_swiper_ID == 1}}' class='HZL_appraise'>
                 <scroll-view class='' scroll-with-animation="true" scroll-y="true" style="height:{{HZL_height}}px" scroll-top="{{HZL_leftToTop}}">
                     <view class="commont">
                         <view class="comList" wx:for="{{commont}}" wx:key="index">
@@ -102,7 +102,7 @@
                         <view style="color:#999999;font-size:24rpx;width:100%;text-align:center;">这是我的底线了！</view>
                     </view>
                 </scroll-view>
-          </view>
+          </view> -->
 
           <!-- 商家 -->
           <view wx:if = '{{HZL_swiper_ID == 2}}' class='HZL_shop'>
