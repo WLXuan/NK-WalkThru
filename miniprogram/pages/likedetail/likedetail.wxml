@@ -1,0 +1,4 @@
+<view class="title">
+  <image src="{{like.picture}}"></image>
+  <view>{{like.name}}</view>
+</view>

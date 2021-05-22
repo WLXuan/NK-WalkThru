@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/likedetail/likedetail",
+    "pages/detail/detail",
+    "pages/my/my",
+    "pages/shopping/shopping",
+    "pages/food/food",
+    "pages/category/category"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4b0082",
+    "navigationBarTitleText": "NK Walk-Thru",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "#4b0082",
+    "backgroundColor": "#e6e6fa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "tabbar/home.png",
+        "selectedIconPath": "tabbar/homed.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "tabbar/sort.png",
+        "selectedIconPath": "tabbar/sorted.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "tabbar/appointment.png",
+        "selectedIconPath": "tabbar/appointmented.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "tabbar/collect.png",
+        "selectedIconPath": "tabbar/collected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

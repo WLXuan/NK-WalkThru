@@ -1,0 +1,200 @@
+/* 搜索栏部分 */
+.search_root {
+  background-color: #4b0082;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  align-items: center;
+}
+.search_icon {
+  margin-left: 8px;
+  width: 57rpx;
+  height: 57rpx;
+}
+.search_input {
+  border-radius: 20rpx;
+  height: 30px;
+  flex: 1;
+  border: 1px solid #4b0082;
+  background-color: #fff;
+}
+/* 轮播图部分*/
+.index-swiper {
+  margin-top: 0rpx;
+}
+.index-swiper swiper {
+  width: 750rpx;
+  height: 390rpx;
+}
+.index-swiper swiper image {
+  width: 750rpx;
+  height: 390rpx;
+}
+/* 热门推荐部分 */
+.hot_tip {
+  color: #4b0082;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hot_tip .hot_tip_title {
+  font-size: 20px;
+  margin-left: 30rpx;
+}
+.hot_tip_more {
+  margin-right: 30rpx;
+}
+/* 理科食堂部分 */
+.index_floor1 {
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.index_floor1 .floor_group1 {
+  height: 400rpx;
+  width: 100vw;
+  display: flex;
+}
+.index_floor1 .floor_group1 .left_title1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30rpx 0;
+  margin-left: 10rpx;
+  flex: 1;
+  background-color: #4b0082;
+  border-radius: 30rpx;
+  font-size: 35rpx;
+  color: #f8f8ff;
+}
+.index_floor1 .floor_group1 .right_content1 {
+  flex: 6;
+  background-color: #ffffff;
+  margin-left: 15rpx;
+}
+.index_floor1 .floor_group1 .right_content1 .content_pic1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.index_floor1 .floor_group1 .right_content1 .content_pic1 .like {
+  width: 266rpx;
+  height: 80rpx;
+  padding-left: 10rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  color: #666;
+  background-color: #e6e6fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index_floor1 .floor_group1 .right_content1 .content_pic1 .like image {
+  height: 75rpx;
+  width: 75rpx;
+}
+/* 文科食堂 */
+.index_floor2 {
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.index_floor2 .floor_group2 {
+  height: 400rpx;
+  width: 100vw;
+  display: flex;
+}
+.index_floor2 .floor_group2 .left_title2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30rpx 0;
+  margin-left: 10rpx;
+  flex: 1;
+  background-color: #4b0082;
+  border-radius: 30rpx;
+  font-size: 35rpx;
+  color: #f8f8ff;
+}
+.index_floor2 .floor_group2 .right_content2 {
+  flex: 6;
+  background-color: #ffffff;
+  margin-left: 15rpx;
+}
+.index_floor2 .floor_group2 .right_content2 .content_pic2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.index_floor2 .floor_group2 .right_content2 .content_pic2 .nav {
+  width: 266rpx;
+  height: 80rpx;
+  padding-left: 10rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  color: #666;
+  background-color: #e6e6fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index_floor2 .floor_group2 .right_content2 .content_pic2 .nav image {
+  height: 75rpx;
+  width: 75rpx;
+}
+/* 清真食堂 */
+.index_floor3 {
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+.index_floor3 .floor_group3 {
+  height: 400rpx;
+  width: 100vw;
+  display: flex;
+}
+.index_floor3 .floor_group3 .left_title3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30rpx 0;
+  margin-left: 10rpx;
+  flex: 1;
+  background-color: #4b0082;
+  border-radius: 30rpx;
+  font-size: 35rpx;
+  color: #f8f8ff;
+}
+.index_floor3 .floor_group3 .right_content3 {
+  flex: 6;
+  background-color: #ffffff;
+  margin-left: 15rpx;
+}
+.index_floor3 .floor_group3 .right_content3 .content_pic3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.index_floor3 .floor_group3 .right_content3 .content_pic3 .nav {
+  width: 266rpx;
+  height: 80rpx;
+  padding-left: 10rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+  color: #666;
+  background-color: #e6e6fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index_floor3 .floor_group3 .right_content3 .content_pic3 .nav image {
+  height: 75rpx;
+  width: 75rpx;
+}

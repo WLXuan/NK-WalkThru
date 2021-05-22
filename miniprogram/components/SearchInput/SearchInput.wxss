@@ -1,0 +1,20 @@
+.foods-search {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  height: 80rpx;
+  background-color:#4b0082;
+  padding: 20rpx;
+}
+.foods-search .nav {
+  line-height: 66rpx;
+  background-color: white;
+  color: #666;
+  text-align: center;
+  border-radius: 25rpx;
+  width: 95%;
+}
+.line {
+  overflow: hidden;
+}

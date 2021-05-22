@@ -1,0 +1,29 @@
+<view class="header" wx:for="{{accountList}}">
+  <image src="{{item.avatar}}"></image>
+  <text>\n{{item.username}}</text>
+</view>
+
+<!-- 我的订单 -->
+<view class="my_item">
+  <button class="button" bindtap="goMyOrder">我的订单</button>
+  <view class="right-arrow">></view>
+</view>
+
+<!-- 未登录也可以显示 -->
+<!-- 反馈建议 -->
+<view class="my_item">
+  <button class="button" open-type="feedback">反馈意见</button>
+  <view class="right-arrow">></view>
+</view>
+
+<!-- 在线客服 -->
+<view class="my_item">
+  <button class="button" open-type="contact">在线客服</button>
+  <view class="right-arrow">></view>
+</view>
+
+<!-- 管理员 -->
+<view class="my_item" bindtap="goAdmin">
+  <text class="button">管理员登录</text>
+  <view class="right-arrow">></view>
+</view>

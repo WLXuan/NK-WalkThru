@@ -1,0 +1,35 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background-color: #4b0082;
+}
+.header image {
+  margin-top: 20px;
+  height: 150rpx;
+  width: 150rpx;
+}
+.my_item {
+  display: flex;
+  padding: 20px;
+  border: 0.5px solid grey;
+}
+.button {
+  height: 25px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.5;
+  font-size: 20px;
+  color: rgb(61, 61, 61);
+  background-color: white;
+}
+.button::after {
+  border: none;
+  border-radius: 0;
+}
