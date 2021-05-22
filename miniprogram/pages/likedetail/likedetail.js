@@ -377,6 +377,15 @@ Page({
     myindex:'0'
   },
   onLoad: function (t) {
+    console.log("携带数据", t)
+    let id = t[""].replace('id','')
+    wx.cloud.database().collection('like').doc(id).get().then(res => {
+      console.log("详情页", res)
+      this.setData({
+        like: res.data
+      })
+    })
+
     // var that = this;
     var a = this;
     // getApp().page.onLoad(a, t);
@@ -441,6 +450,8 @@ Page({
    
     
   },
+
+
   yue:function(){
     var query = wx.createSelectorQuery();
     var a = this

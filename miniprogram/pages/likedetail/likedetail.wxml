@@ -1,20 +1,20 @@
-<view class="title" style="width: 750rpx; height: 72rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+<view class="title">
   <image src="{{like.picture}}"></image>
   <view>{{like.name}}</view>
 </view>
 
-<view class="page" style="width: 750rpx; height: 1102rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+<view class="page" >
 
 <view class="zongFather">
 <!-- 分类栏 -->
-<view class='HZL_classify'>
+<!-- <view class='HZL_classify'>
     <view wx:for = '{{HZL_categories}}' wx:key = 'id'>
         <view class='HZL_categories' bindtap='HZL_categories' data-index='{{index}}'>
             <text class="{{index === HZL_swiper_ID ? 'HZL_categories_text' : 'tongyi'}}">{{item}}</text>
             <view class="{{index == HZL_swiper_ID ? 'line' :''}}" style="color:#4b0082"></view>
         </view>
     </view>
-</view>
+</view> -->
 </view>
 
 
@@ -111,7 +111,7 @@
       </view>
 </swiper-item>
 </swiper>
-<view style="height:210rpx"></view>
+<!-- <view style="height:400rpx"></view> -->
 <!-- 下面的购物车 -->
 <view wx:if = '{{HZL_isCat > 0}}' class = 'HZL_cat_bottom' bindtap='HZL_isCat_close' ></view>
 
@@ -179,7 +179,7 @@
 <!-- 购物车 -->
 <view wx:if = '{{HZL_swiper_ID == 0}}' class='HZL_cat' style="bottom:0px">
 <view class='HZL_cat_img_view' bindtap='HZL_isCat'>
-<image src='https://yb.qiweibang.com/web/uploads/image/store_1/20200402111305Ekm1vygSQs.png' class='HZL_cat_img'></image>
+<image src='../../images/gouwuche.png' class='HZL_cat_img'></image>
 <view class='HZL_cat_num' wx:if = '{{HZL_num > 0}}'>{{HZL_num}}</view>
 
 </view>
