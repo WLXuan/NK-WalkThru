@@ -6,6 +6,7 @@
     "pages/my/my",
     "pages/shopping/shopping",
     "pages/food/food",
+    "pages/hotlist/hotlist",
     "pages/category/category"
   ],
   "window": {

@@ -1,0 +1,15 @@
+<!-- 菜品列表 -->
+<view class="hot_list" wx:for="{{hotList}}">
+    <image src="{{item.picture}}"></image>
+    <view class="text">
+        <view class="item_title">
+            <text>{{item.name}}</text>
+            <text class="canteen">{{item.canteen}}</text>
+        </view>
+        <view class="sales">
+            <text>销量：{{item.sales}}</text>
+            <text>{{item.window}}</text>
+        </view>
+        <view class="price">￥{{item.price}}</view>
+    </view>
+</view>

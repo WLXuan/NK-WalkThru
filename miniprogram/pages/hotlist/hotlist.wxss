@@ -1,0 +1,33 @@
+.hot_list {
+  display: flex;
+  align-items: center;
+  margin: 5px 30rpx;
+  border-bottom: 0.2px solid #e6e6fa;
+}
+.hot_list image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.item_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+.text {
+  margin-left: 30px;
+}
+.canteen {
+  color: #666;
+}
+.sales {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+.price {
+  color: #4b0082;
+}

@@ -37,6 +37,7 @@ Page({
         likeList: like.data
       })
     })
+    this.getHotList()
 
   },
   getSearch(e){
@@ -54,6 +55,20 @@ Page({
         title: '搜索词为空',
       })
     }
+  },
+  getHotList() {
+    wx.cloud.database().collection('dish').orderBy("sales", 'desc')
+    .limit(5).get().then(res => {
+      console.log("dish", res)
+      this.setData({
+        hotList: res.data
+      })
+    })
+  },
+  goHot() {
+    wx.navigateTo({
+      url: '/pages/hotlist/hotlist',
+    })
   }
 
 })

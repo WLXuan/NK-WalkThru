@@ -48,16 +48,14 @@
                                     <image class="myImg" mode="aspectFill" src="../../image/11.png"></image>
                                 </view>
                                 <view class="sjopName">
-                                    <view class="name">{{item.category_name}} <text style="color:#959595;font-size:26rpx">(超辣)</text> </view>
+                                    <view class="name">{{item.category_name}}</view>
                                     <view class="yishou">
                                         <view> 已售：<text style="color:#4b0082">{{item.num}}</text>份</view>
-                                        <view class="kucun">库存{{item.kc_number}}</view>
                                    </view>
                                     <view class="price">
                                         <view class="xianjia">
                                             <text style="color:#4b0082">￥{{item.price}}</text><text style="color:#959595">/份</text>
                                         </view>
-                                        <view class="yuanjia">￥{{item.original_price}}</view>
                                     </view>
                                 </view>
                                 <view class="caozuo" style="">                                      

@@ -4,7 +4,9 @@ const RIGHT_BAR_HEIGHT = 20;
 // 右侧每个子类的高度（固定）
 const RIGHT_ITEM_HEIGHT = 100;   
 // 左侧每个类的高度（固定）
-const LEFT_ITEM_HEIGHT = 50       
+const LEFT_ITEM_HEIGHT = 50;
+
+const dish_window = '';       
 
 Page({
   data: {
@@ -380,11 +382,21 @@ Page({
     console.log("携带数据", t)
     let id = t[""].replace('id','')
     wx.cloud.database().collection('like').doc(id).get().then(res => {
-      console.log("详情页", res)
+      console.log("详情页", res.data.name)
       this.setData({
         like: res.data
       })
+      wx.cloud.database().collection('dish')
+      .where({
+        window: res.data.name
+      }).get().then(res => {
+        console.log("该窗口", res.data)
+        this.setData({
+          dishList: res.data
+        })
     })
+    })
+    
 
     // var that = this;
     var a = this;

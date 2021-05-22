@@ -2,10 +2,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 15px;
   color: rgb(255, 255, 255);
   background-color: #4b0082;
-  height: 80px;
+  height: 180px;
 }
 .header image {
   margin-top: 20px;
@@ -15,11 +17,18 @@
 .loginin {
   align-items: center;
   border-radius: 30rpx;
+  justify-content: center;
   display: flex;
   margin-top: 20px;
-  width: 140px;
+  width: 240px;
   height: 50px;
   text-align: center;
+}
+.avatar {
+  margin-bottom: 10px;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
 }
 .my_item {
   display: flex;

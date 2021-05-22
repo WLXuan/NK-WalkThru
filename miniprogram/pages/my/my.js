@@ -5,7 +5,9 @@ Page({
   data: {
     isShowUserName: false,
     userInfo: null,
-    nickName: ''
+    nickName: '',
+    avatar: '',
+    nologin: true
   },
   onGotUserInfo: function(e){
 
@@ -14,14 +16,14 @@ Page({
 
   },
   login(){
-    let that = this
-    console.log("点击登录")
     wx.getUserProfile({
       desc: '用于完善用户资料',
-      success: (res)=>{
-        console.log("授权成功",res.userInfo)
-        that.setData({
-          nickName: res.userInfo.nickName
+      success: res => {
+        // console.log("授权成功",res.userInfo)
+        this.setData({
+          nickName: res.userInfo.nickName,
+          avatar: res.userInfo.avatarUrl,
+          nologin:false
         })
       },
       fail: (res) => {

@@ -2,9 +2,12 @@
   <image src="{{item.avatar}}"></image>
   <text>\n{{item.username}}</text>
 </view> -->
-<view class="header" >
+<view class="header" wx:if="{{nologin}}">
   <button class="loginin" bindtap="login">点击授权登录</button>
-  <text>{{nickName}}</text>
+</view>
+<view class="header" wx:else>
+  <image class="avatar" src="{{avatar}}"></image>
+  <text class="nickname">{{nickName}}</text>
 </view>
 
 <!-- 我的订单 -->

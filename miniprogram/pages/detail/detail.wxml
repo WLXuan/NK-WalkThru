@@ -1,1 +1,31 @@
-<image src="{{detail.pic_swiper}}"></image>
+<image src="{{detail.swiper_pic}}"></image>
+<view wx:for="{{dishList}}">
+  <view class="HZL_scroll_right_top">{{item.category}}</view>
+  <view class="HZL_scroll_right_view" wx:for="{{item.category}}" wx:key="goods_id" catchtap="showRule" data-parentIndex='{{parentIndex}}' data-index='{{index}}'>
+    <view class="shopImg">
+      <image class="myImg" mode="aspectFill" src="{{item.picture}}"></image>
+    </view>
+    <view class="sjopName">
+      <view class="name">{{item.name}}</view>
+      <view class="yishou">
+        <view> 已售：
+          <text style="color:#4b0082">{{item.sales}}</text>份</view>
+        </view>
+        <view class="price">
+          <view class="xianjia">
+            <text style="color:#4b0082">￥{{item.price}}</text>
+            <text style="color:#959595">/份</text>
+          </view>
+        </view>
+      </view>
+      <view class="caozuo" style="">  
+        <view class="anniu">       
+          <view wx:if = '{{item.num == 0}}' class='HZL_num'></view>
+          <view wx:if = '{{item.num == 0}}' class='HZL_num'></view>
+          <view wx:if = '{{item.num > 0}}' class='HZL_jian iconfont icon-jianhao' catchtap='HZL_jian'  data-parentIndex='{{parentIndex}}' data-index='{{index}}'>-</view>
+          <view wx:if = '{{item.num > 0}}'  class='HZL_num'>{{item.num}}</view>
+          <view  class='HZL_jia iconfont icon-jiahao1' catchtap='HZL_jia' data-parentIndex='{{parentIndex}}' data-index='{{index}}'>+</view>
+        </view>
+      </view>
+    </view>
+  </view>
