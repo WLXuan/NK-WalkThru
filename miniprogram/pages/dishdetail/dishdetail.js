@@ -226,7 +226,7 @@ Page({
     });
     console.log("携带数据", options)
     let id = options[""].replace('id','')
-    wx.cloud.database().collection('like').doc(id).get().then(rres => {
+    wx.cloud.database().collection('dish').doc(id).get().then(rres => {
       console.log("详情页", rres.data.name)
       this.setData({
         like: rres.data
@@ -235,7 +235,7 @@ Page({
       console.log("this.winname", win_name)
       //筛选该窗口菜品种类
       wx.cloud.database().collection('categorys').where({
-        window_name: rres.data.name 
+        window_name: rres.data.window 
       }).get().then(res => {
         console.log("筛选的窗口名", res.data)
         this.setData({
@@ -245,7 +245,7 @@ Page({
         //筛选菜品
         wx.cloud.database().collection('dish')
         .where({
-          window: rres.data.name
+          window: rres.data.window
         }).get().then(ress => {
           console.log("获取dish",ress.data)
           console.log("获取category",res.data)

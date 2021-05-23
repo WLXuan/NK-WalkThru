@@ -2,7 +2,7 @@
   <view class="HeadImg">
     <image src="{{like.picture}}" style="width:100%;height:100%;background-color:white"></image>
   </view>
-  <text class="ShopName">{{like.name}}</text>
+  <text class="ShopName">{{like.window}}</text>
   <text class="ShopPay">配送费：¥0.00 餐盒费：¥0.00</text>
   <text class="ShopAddr">地址：广州市xxxx</text>
   <text class="ShopIntroduce">未填写商铺介绍</text>

@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/likedetail/likedetail",
+    "pages/qingzhendetail/qingzhendetail",
+    "pages/dishdetail/dishdetail",
+    "pages/wenkedetail/wenkedetail",
     "pages/detail/detail",
     "pages/my/my",
     "pages/shopping/shopping",

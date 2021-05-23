@@ -1,14 +1,12 @@
 <!-- 理科食堂 -->
 <view class="index_floor1">
     <view class="floor_group1">
-
         <view class="left_title1">
             <view>理</view>
             <view>科</view>
             <view>食</view>
             <view>堂</view>
         </view>
-
         <view class="right_content1">
             <view class="content_pic1">
                 <view class="like" wx:for="{{likeList}}"
@@ -16,41 +14,6 @@
                     <view>{{item.name}}</view>
                     <image src="{{item.picture}}" lazy-load></image>
                 </view>
-                   <!-- <view class="nav" bindtap="gojianbing" data-="{{item}}">
-                       杂粮煎饼
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/jianbing.png?sign=e4e42244c461acefc31ccadb6f864eb5&t=1621245852"/>
-                   </view>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1002">
-                       淮南牛肉汤
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/niuroutang.png?sign=5ce575d4f7a6b4dc6fb22c66fa29b722&t=1621245928"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1003">
-                       米掌门
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/baozaifan.png?sign=047b72a3e7ec117a108720ade7d8c50d&t=1621245750"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1004">
-                       面行人
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/banmian.png?sign=e0966ece7b1a5ca0df01ccd4bf067645&t=1621245510"/>
-                         
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1005">
-                       面夫子
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/baozi.png?sign=0c439a400416e4a24fc2aeec72d14b03&t=1621245814"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1006">
-                       黄焖鸡米饭
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/huangmenji.png?sign=634e2c315cd3481bd2fa77094b0ea1e4&t=1621245833"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1007">
-                       骨汤麻辣烫
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/malatang.png?sign=2c7e871cd22c05f3a48dfad6af61e5ca&t=1621245866"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1008">
-                       F+牛肉饭
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/niuroufan.png?sign=214ea7753851063baff50184899d520d&t=1621245908"/>
-                   </navigator> -->
-               
-                 
             </view>
         </view>
     </view>
@@ -58,59 +21,32 @@
 
 
 <!-- 文科食堂 -->
-<!-- <view class="index_floor2">
+<view class="index_floor2">
     <view class="floor_group2">
-
-        <view class="left_title2 left_title_drink">
+        <view class="left_title2">
             <view>文</view>
             <view>科</view>
             <view>食</view>
             <view>堂</view>
         </view>
-
         <view class="right_content2">
             <view class="content_pic2">
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1001">
-                       杂粮煎饼
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/jianbing.png?sign=e4e42244c461acefc31ccadb6f864eb5&t=1621245852"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1002">
-                       淮南牛肉汤
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/niuroutang.png?sign=5ce575d4f7a6b4dc6fb22c66fa29b722&t=1621245928"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1003">
-                       米掌门
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/baozaifan.png?sign=047b72a3e7ec117a108720ade7d8c50d&t=1621245750"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1004">
-                       面行人
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/banmian.png?sign=e0966ece7b1a5ca0df01ccd4bf067645&t=1621245510"/>
-                         
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1005">
-                       面夫子
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/baozi.png?sign=0c439a400416e4a24fc2aeec72d14b03&t=1621245814"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1006">
-                       黄焖鸡米饭
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/huangmenji.png?sign=634e2c315cd3481bd2fa77094b0ea1e4&t=1621245833"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1007">
-                       骨汤麻辣烫
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/malatang.png?sign=2c7e871cd22c05f3a48dfad6af61e5ca&t=1621245866"/>
-                   </navigator>
-                   <navigator class="nav" url="/pages/goods_detail/index?goods_id=1008">
-                       F+牛肉饭
-                       <image lazy-load src="https://636c-cloud1-1gtyzxgzf35cbc33-1305332210.tcb.qcloud.la/niuroufan.png?sign=214ea7753851063baff50184899d520d&t=1621245908"/>
-                   </navigator>
-               
-                 
+                <view class="wenke" wx:for="{{wenkeList}}"
+                bindtap="goWenkeDetail" data-="{{item}}" >
+                    <view>{{item.name}}</view>
+                    <image src="{{item.picture}}" lazy-load></image>
+                </view>
             </view>
         </view>
     </view>
-</view> -->
+</view>
 
 <!-- 清真食堂 -->
+<view class="qingzhen">
+    <view class="left_title3" bindtap="goQingzhenDetail">
+            <view>清  真  食 堂</view>
+        </view>
+</view>
 <!-- <view class="index_floor3">
     <view class="floor_group3">
 

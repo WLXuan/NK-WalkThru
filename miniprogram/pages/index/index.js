@@ -40,6 +40,13 @@ Page({
     this.getHotList()
 
   },
+  goDetailPage(e) {
+    console.log("log",e.currentTarget.dataset[""]._id)
+    let id = e.currentTarget.dataset[""]._id
+    wx.navigateTo({
+      url: '/pages/dishdetail/dishdetail?=id' + id
+    })
+  },
   getSearch(e){
     console.log(e.detail.value)
     searchKey = e.detail.value

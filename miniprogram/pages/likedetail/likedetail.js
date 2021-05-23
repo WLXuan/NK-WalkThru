@@ -498,9 +498,9 @@ Page({
     }).exec();
     //高度大小
     wx.getSystemInfo({
-      success: function (res) {
-        var HZL_height = res.windowHeight - 260
-        var HZL_height1 = res.windowHeight - 210
+      success: function (ress) {
+        var HZL_height = ress.windowHeight - 260
+        var HZL_height1 = ress.windowHeight - 210
         a.setData({
           HZL_height: HZL_height,
           HZL_height1: HZL_height1

@@ -24,6 +24,7 @@ Page({
     if(this.data.PayList.length== 0){
       wx.showToast({
         title: '你还没有点餐',
+        image: '../statc/1.jpg',
         duration: 2000
       })
     }else{
@@ -184,7 +185,6 @@ Page({
     var num = this.data.realFoodList[parentIndex].Food[index].Number;
     var name = this.data.realFoodList[parentIndex].Food[index].name;
     var Id = this.data.realFoodList[parentIndex].Food[index].FoodId;
-    var pic = this.data.realFoodList[parentIndex].Food[index].picture;
     var obj = {
       pay: price,
       Number: num,
@@ -192,8 +192,7 @@ Page({
       name: name,
       index: index,
       parentIndex: parentIndex,
-      FoodId: Id,
-      picture: pic
+      FoodId: Id
     };
     var carArray1 = this.data.PayList.filter(item => item.mark != mark)
     carArray1.push(obj)
@@ -226,7 +225,7 @@ Page({
     });
     console.log("携带数据", options)
     let id = options[""].replace('id','')
-    wx.cloud.database().collection('like').doc(id).get().then(rres => {
+    wx.cloud.database().collection('wenke').doc(id).get().then(rres => {
       console.log("详情页", rres.data.name)
       this.setData({
         like: rres.data

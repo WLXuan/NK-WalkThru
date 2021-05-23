@@ -56,7 +56,7 @@
   margin-bottom: 30rpx;
 }
 .index_floor2 .floor_group2 {
-  height: 400rpx;
+  height: 800rpx;
   width: 100vw;
   display: flex;
 }
@@ -85,7 +85,7 @@
   flex-wrap: wrap;
   align-items: center;
 }
-.index_floor2 .floor_group2 .right_content2 .content_pic2 .nav {
+.index_floor2 .floor_group2 .right_content2 .content_pic2 .wenke {
   width: 266rpx;
   height: 80rpx;
   padding-left: 10rpx;
@@ -97,58 +97,26 @@
   justify-content: space-between;
   align-items: center;
 }
-.index_floor2 .floor_group2 .right_content2 .content_pic2 .nav image {
+.index_floor2 .floor_group2 .right_content2 .content_pic2 .wenke image {
   height: 75rpx;
   width: 75rpx;
 }
 /* 清真食堂 */
-.index_floor3 {
+.qingzhen {
   margin-top: 20rpx;
-  margin-bottom: 30rpx;
 }
-.index_floor3 .floor_group3 {
-  height: 400rpx;
-  width: 100vw;
-  display: flex;
-}
-.index_floor3 .floor_group3 .left_title3 {
+.left_title3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 30rpx 0;
-  margin-left: 10rpx;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  margin-bottom: 20rpx;
   flex: 1;
   background-color: #4b0082;
   border-radius: 30rpx;
   font-size: 35rpx;
   color: #f8f8ff;
-}
-.index_floor3 .floor_group3 .right_content3 {
-  flex: 6;
-  background-color: #ffffff;
-  margin-left: 15rpx;
-}
-.index_floor3 .floor_group3 .right_content3 .content_pic3 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.index_floor3 .floor_group3 .right_content3 .content_pic3 .nav {
-  width: 266rpx;
-  height: 80rpx;
-  padding-left: 10rpx;
-  margin-left: 20rpx;
-  border-radius: 10rpx;
-  color: #666;
-  background-color: #e6e6fa;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.index_floor3 .floor_group3 .right_content3 .content_pic3 .nav image {
-  height: 75rpx;
-  width: 75rpx;
 }

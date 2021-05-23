@@ -1,5 +1,5 @@
 <!-- 菜品列表 -->
-<view class="hot_list" wx:for="{{hotList}}">
+<view class="hot_list" wx:for="{{hotList}}" bindtap="goDetailPage" data-="{{item}}">
     <image src="{{item.picture}}"></image>
     <view class="text">
         <view class="item_title">

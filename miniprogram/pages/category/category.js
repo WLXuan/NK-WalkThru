@@ -4,20 +4,27 @@ Page({
     console.log("理科食堂", e.currentTarget.dataset[""]._id)
     let id = e.currentTarget.dataset[""]._id
     wx.navigateTo({
-      url: '/pages/likedetail/likedetail?=id' + id
+      // url: '/pages/likedetail/likedetail?=id' + id
+      url: '/pages/detail/detail?=id' + id
+    })
+  },
+  goWenkeDetail(e) {
+    console.log("文科食堂", e.currentTarget.dataset[""]._id)
+    let id = e.currentTarget.dataset[""]._id
+    wx.navigateTo({
+      // url: '/pages/likedetail/likedetail?=id' + id
+      url: '/pages/wenkedetail/wenkedetail?=id' + id
+    })
+  },
+  goQingzhenDetail(e) {
+    console.log("清真食堂", e)
+    wx.navigateTo({
+      // url: '/pages/likedetail/likedetail?=id' + id
+      url: '/pages/qingzhendetail/qingzhendetail'
     })
   },
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     wx.cloud.init()
     wx.cloud.database().collection('like').get().then(like => {
@@ -26,55 +33,13 @@ Page({
         likeList: like.data
       })
     })
+    wx.cloud.database().collection('wenke').get().then(wenke => {
+      console.log("文科食堂", wenke)
+      this.setData({
+        wenkeList: wenke.data
+      })
+    })
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
