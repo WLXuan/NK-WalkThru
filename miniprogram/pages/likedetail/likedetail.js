@@ -6,344 +6,347 @@ const RIGHT_ITEM_HEIGHT = 100;
 // 左侧每个类的高度（固定）
 const LEFT_ITEM_HEIGHT = 50;
 
-const dish_window = '';       
+const dish_window = '';    
+const su = [];   
+const rou =[];
+const realList=[];
 
 Page({
   data: {
-    constants:[
-      {
-        "id": "1",
-        "ids": "id1",
-        "name": "爆款",
-        "category": [
-          {
-            "category_id": 1,
-            "category_name": "招牌鸭脖",
-            "num":0,
-            'price':'23',
-          },
-          {
-            "category_id": 2,
-            "category_name": "category2",
-            "num": 0,
-            price:232,
-          },
-          {
-            "category_id": 3,
-            "category_name": "category3",
-            "num": 0,
-            price:223,
-          }
-        ],
-      },
-      {
-        "id": "2",
-        "ids": "id2",
-        "name": "超辣",
-        "category": [
-          {
-            "category_id": 4,
-            "category_name": "category4",
-            "num": 0,
-            price:213,
-          },
-          {
-            "category_id": 5,
-            "category_name": "category5",
-            "num": 0,
-            price:237,
-          },
-          {
-            "category_id": 6,
-            "category_name": "category6",
-            "num": 0,
-            'price':'23',
-          },
-          {
-            "category_id": 7,
-            "category_name": "category7",
-            "num": 0,
-            'price':'23',
-          },
-          {
-            "category_id": 8,
-            "category_name": "category8",
-            "num": 0,
-            'price':'23',
-          }, {
-            "category_id": 9,
-            "category_name": "category9",
-            "num": 0,
-            'price':'23',
-          },
-          {
-            "category_id": 10,
-            "category_name": "category10",
-            "num": 0,
-            'price':'2312',
-          },
-          {
-            "category_id": 11,
-            "category_name": "category11",
-            "num": 0,
-            'price':'23',
-          },
-          {
-            "category_id": 12,
-            "category_name": "category12",
-            "num": 0,
-            'price':'120',
-          },
-          {
-            "category_id": 13,
-            "category_name": "category13",
-            "num": 0,
-            'price':'12',
-          },
-          {
-            "category_id": 14,
-            "category_name": "category14",
-            "num": 0,
-            'price':'2376',
-          },
-          {
-            "category_id": 15,
-            "category_name": "category15",
-            "num": 0,
-            'price':'2113',
-          },
-          {
-            "category_id": 16,
-            "category_name": "category16",
-            "num": 0,
-            'price':'2300',
-          },
-        ]
-      },
-      {
-        "id": "3",
-        "ids": "id3",
-        "name": "甜辣",
-        "category": [
-          {
-            "category_id": 17,
-            "category_name": "category17",
-            "num": 0,
-            'price':'2300',
-          },
-          {
-            "category_id": 18,
-            "category_name": "category18",
-            "num": 0,
-            'price':'2300',
-          },
-          {
-            "category_id": 19,
-            "category_name": "category19",
-            "num": 0,
-            'price':'2300',
-          }
-        ],
-      },
-      {
-        "id": "4",
-        "ids": "id4",
-        "name": "不辣",
-        "category": [
-          {
-            "category_id": 20,
-            "category_name": "category20",
-            "num": 0,
-            'price':'2300',
-          },
-          {
-            "category_id": 21,
-            "category_name": "category21",
-            "num": 0,
-            'price':'2130',
-          },
-          {
-            "category_id": 22,
-            "category_name": "category22",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 23,
-            "category_name": "category23",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 24,
-            "category_name": "category24",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 25,
-            "category_name": "category25",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 26,
-            "category_name": "category26",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 27,
-            "category_name": "category27",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 28,
-            "category_name": "category28",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 29,
-            "category_name": "category29",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 30,
-            "category_name": "category30",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 31,
-            "category_name": "category31",
-            "num": 0,
-            'price':'30',
-          },
-          {
-            "category_id": 32,
-            "category_name": "category32",
-            "num": 0,
-            'price':'30',
-          }
-        ],
-      },
-      {
-        "id": "5",
-        "ids": "id5",
-        "name": "招牌系列",
-        "category": [
-          {
-            "category_id": 33,
-            "category_name": "category33",
-            "num": 0,
-          },
-          {
-            "category_id": 34,
-            "category_name": "category34",
-            "num": 0,
-          },
-          {
-            "category_id": 35,
-            "category_name": "category35",
-            "num": 0,
-          }
-        ],
-      },
-      {
-        "id": "6",
-        "ids": "id6",
-        "name": "藤椒系列",
-        "category": [
-          {
-            "category_id": 36,
-            "category_name": "category36",
-            "num": 0,
-          },
-          {
-            "category_id": 37,
-            "category_name": "category37",
-            "num": 0,
-          },
-          {
-            "category_id": 38,
-            "category_name": "category38",
-            "num": 0,
-          }
-        ],
-      },
-      {
-        "id": "7",
-        "ids": "id7",
-        "name": "name7",
-        "category": [
-          {
-            "category_id": 39,
-            "category_name": "category39",
-            "num": 0,
-          },
-          {
-            "category_id": 40,
-            "category_name": "category40",
-            "num": 0,
-          },
-          {
-            "category_id": 41,
-            "category_name": "category41",
-            "num": 0,
-          }
-        ],
-      },
-      {
-        "id": "8",
-        "ids": "id8",
-        "name": "name8",
-        "category": [
-          {
-            "category_id": 39,
-            "category_name": "category39",
-            "num": 0,
-          },
-          {
-            "category_id": 40,
-            "category_name": "category40",
-            "num": 0,
-          },
-          {
-            "category_id": 41,
-            "category_name": "category41",
-            "num": 0,
-          }
-        ],
-      },
-      {
-        "id": "9",
-        "ids": "id9",
-        "name": "name9",
-        "category": [
-          {
-            "category_id": 39,
-            "category_name": "category39",
-            "num": 0,
-          },
-          {
-            "category_id": 40,
-            "category_name": "category40",
-            "num": 0,
-          },
-          {
-            "category_id": 41,
-            "category_name": "category41",
-            "num": 0,
-          }
-        ],
-      },
+  //   constants:[
+  //     {
+  //       "id": "1",
+  //       "ids": "id1",
+  //       "name": "爆款",
+  //       "category": [
+  //         {
+  //           "category_id": 1,
+  //           "category_name": "招牌鸭脖",
+  //           "num":0,
+  //           'price':'23',
+  //         },
+  //         {
+  //           "category_id": 2,
+  //           "category_name": "category2",
+  //           "num": 0,
+  //           price:232,
+  //         },
+  //         {
+  //           "category_id": 3,
+  //           "category_name": "category3",
+  //           "num": 0,
+  //           price:223,
+  //         }
+  //       ],
+  //     },
+  //     {
+  //       "id": "2",
+  //       "ids": "id2",
+  //       "name": "超辣",
+  //       "category": [
+  //         {
+  //           "category_id": 4,
+  //           "category_name": "category4",
+  //           "num": 0,
+  //           price:213,
+  //         },
+  //         {
+  //           "category_id": 5,
+  //           "category_name": "category5",
+  //           "num": 0,
+  //           price:237,
+  //         },
+  //         {
+  //           "category_id": 6,
+  //           "category_name": "category6",
+  //           "num": 0,
+  //           'price':'23',
+  //         },
+  //         {
+  //           "category_id": 7,
+  //           "category_name": "category7",
+  //           "num": 0,
+  //           'price':'23',
+  //         },
+  //         {
+  //           "category_id": 8,
+  //           "category_name": "category8",
+  //           "num": 0,
+  //           'price':'23',
+  //         }, {
+  //           "category_id": 9,
+  //           "category_name": "category9",
+  //           "num": 0,
+  //           'price':'23',
+  //         },
+  //         {
+  //           "category_id": 10,
+  //           "category_name": "category10",
+  //           "num": 0,
+  //           'price':'2312',
+  //         },
+  //         {
+  //           "category_id": 11,
+  //           "category_name": "category11",
+  //           "num": 0,
+  //           'price':'23',
+  //         },
+  //         {
+  //           "category_id": 12,
+  //           "category_name": "category12",
+  //           "num": 0,
+  //           'price':'120',
+  //         },
+  //         {
+  //           "category_id": 13,
+  //           "category_name": "category13",
+  //           "num": 0,
+  //           'price':'12',
+  //         },
+  //         {
+  //           "category_id": 14,
+  //           "category_name": "category14",
+  //           "num": 0,
+  //           'price':'2376',
+  //         },
+  //         {
+  //           "category_id": 15,
+  //           "category_name": "category15",
+  //           "num": 0,
+  //           'price':'2113',
+  //         },
+  //         {
+  //           "category_id": 16,
+  //           "category_name": "category16",
+  //           "num": 0,
+  //           'price':'2300',
+  //         },
+  //       ]
+  //     },
+  //     {
+  //       "id": "3",
+  //       "ids": "id3",
+  //       "name": "甜辣",
+  //       "category": [
+  //         {
+  //           "category_id": 17,
+  //           "category_name": "category17",
+  //           "num": 0,
+  //           'price':'2300',
+  //         },
+  //         {
+  //           "category_id": 18,
+  //           "category_name": "category18",
+  //           "num": 0,
+  //           'price':'2300',
+  //         },
+  //         {
+  //           "category_id": 19,
+  //           "category_name": "category19",
+  //           "num": 0,
+  //           'price':'2300',
+  //         }
+  //       ],
+  //     },
+  //     {
+  //       "id": "4",
+  //       "ids": "id4",
+  //       "name": "不辣",
+  //       "category": [
+  //         {
+  //           "category_id": 20,
+  //           "category_name": "category20",
+  //           "num": 0,
+  //           'price':'2300',
+  //         },
+  //         {
+  //           "category_id": 21,
+  //           "category_name": "category21",
+  //           "num": 0,
+  //           'price':'2130',
+  //         },
+  //         {
+  //           "category_id": 22,
+  //           "category_name": "category22",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 23,
+  //           "category_name": "category23",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 24,
+  //           "category_name": "category24",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 25,
+  //           "category_name": "category25",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 26,
+  //           "category_name": "category26",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 27,
+  //           "category_name": "category27",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 28,
+  //           "category_name": "category28",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 29,
+  //           "category_name": "category29",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 30,
+  //           "category_name": "category30",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 31,
+  //           "category_name": "category31",
+  //           "num": 0,
+  //           'price':'30',
+  //         },
+  //         {
+  //           "category_id": 32,
+  //           "category_name": "category32",
+  //           "num": 0,
+  //           'price':'30',
+  //         }
+  //       ],
+  //     },
+  //     {
+  //       "id": "5",
+  //       "ids": "id5",
+  //       "name": "招牌系列",
+  //       "category": [
+  //         {
+  //           "category_id": 33,
+  //           "category_name": "category33",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 34,
+  //           "category_name": "category34",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 35,
+  //           "category_name": "category35",
+  //           "num": 0,
+  //         }
+  //       ],
+  //     },
+  //     {
+  //       "id": "6",
+  //       "ids": "id6",
+  //       "name": "藤椒系列",
+  //       "category": [
+  //         {
+  //           "category_id": 36,
+  //           "category_name": "category36",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 37,
+  //           "category_name": "category37",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 38,
+  //           "category_name": "category38",
+  //           "num": 0,
+  //         }
+  //       ],
+  //     },
+  //     {
+  //       "id": "7",
+  //       "ids": "id7",
+  //       "name": "name7",
+  //       "category": [
+  //         {
+  //           "category_id": 39,
+  //           "category_name": "category39",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 40,
+  //           "category_name": "category40",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 41,
+  //           "category_name": "category41",
+  //           "num": 0,
+  //         }
+  //       ],
+  //     },
+  //     {
+  //       "id": "8",
+  //       "ids": "id8",
+  //       "name": "name8",
+  //       "category": [
+  //         {
+  //           "category_id": 39,
+  //           "category_name": "category39",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 40,
+  //           "category_name": "category40",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 41,
+  //           "category_name": "category41",
+  //           "num": 0,
+  //         }
+  //       ],
+  //     },
+  //     {
+  //       "id": "9",
+  //       "ids": "id9",
+  //       "name": "name9",
+  //       "category": [
+  //         {
+  //           "category_id": 39,
+  //           "category_name": "category39",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 40,
+  //           "category_name": "category40",
+  //           "num": 0,
+  //         },
+  //         {
+  //           "category_id": 41,
+  //           "category_name": "category41",
+  //           "num": 0,
+  //         }
+  //       ],
+  //     },
 
 
       
-  ],
+  // ],
     //是否显示下面的购物车
     HZL_isCat:0,
     //购物车的商品
@@ -392,32 +395,82 @@ Page({
       }).get().then(res => {
         console.log("该窗口", res.data)
         this.setData({
-          dishList: res.data
+          dishList: res.data,
+          dishNum: res.data.length
         })
-    })
+        var an = res.data
+        var j
+        var tmp = 1
+        console.log("an.dishNum",an.length)
+        for(j = 0; j< an.length; j++){
+          if(an[j].category=="肉"){
+            console.log("有肉1",an[j].category)
+            var x = {
+              "category_id": tmp,
+              "category_name": an[j].name,
+              "num":0,
+              'price': an[j].price.toString(),
+            }
+            rou.push(x)
+            console.log("检测push",rou)
+            tmp ++
+          }
+        }
+        for(j = 0; j<an.length; j++){
+          console.log("吃素", su)
+          if(an[j].category=='素'){
+            var x = {
+              "category_id": tmp,
+              "category_name": an[j].name,
+              "num":0,
+              'price': an[j].price.toString(),
+            }
+            su.push(x)
+            console.log("今天吃素",su)
+            tmp ++
+          }
+        }
+        var rous = {
+          "id": "1",
+          "ids": "id1",
+          "name": "肉",
+          "category": rou
+        }
+        var sus = {
+          "id": "2",
+          "ids": "id2",
+          "name": "素",
+          "category": su
+        }
+        realList.push(rous)
+        realList.push(sus)
+        console.log("我的数据",realList)
+
+
+
+
+      })
+      wx.cloud.database().collection('categorys')
+      .where({
+        window_name: res.data.name
+      }).get().then(res => {
+        console.log("该窗口的种类", res.data)
+        this.setData({
+          categoryList: res.data,
+          categoryNum: res.data.length
+        })
+      })
     })
     
 
-    // var that = this;
     var a = this;
-    // getApp().page.onLoad(a, t);
+
     console.log(t)
     if(t.mch_id){
       a.setData({
         mch_id:t.mch_id
       })
     }
-    // var e = getApp().core.getStorageSync(getApp().const.STORE), o = t.cat_id;
-    // void 0 !== o && o && (a.data.cat_style = e.cat_style = -1, 
-    // getApp().core.showLoading({
-    //     title: "正在加载",
-    //     mask: !0
-    // }),
-    // a.childrenCat(o)
-    // ),
-    // a.setData({
-    //     store: e
-    // });
     //导航栏的文字
     wx.setNavigationBarTitle({
       title: '窗口详情',
@@ -461,6 +514,54 @@ Page({
     // a.getLocation()
    
     
+  },
+
+  initList(){
+    var a = this.data
+    var j
+    var tmp = 1
+    console.log("a.dishNum",a.dishNum)
+    for(j = 0; j<a.dishNum; j++){
+      console.log("有肉1",a.dishList[j].category)
+      if(a.dishList[j].category=="肉"){
+        console.log("有肉1",a.dishList[j].category)
+        var x = {
+          "category_id": tmp,
+          "category_name": a.dishList[j].name,
+          "num":0,
+          'price': a.dishList[j].price,
+        }
+        a.rou.push(x)
+        tmp ++
+      }
+    }
+    for(j = 0; j<a.dishNum; j++){
+      if(a.dishList[j].category=='素'){
+        var x = {
+          "category_id": tmp,
+          "category_name": a.dishList[j].name,
+          "num":0,
+          'price': a.dishList[j].price,
+        }
+        a.su.push(x)
+        tmp ++
+      }
+    }
+    var rous = {
+      "id": "1",
+      "ids": "id1",
+      "name": "肉",
+      "category": a.rou
+    }
+    var sus = {
+      "id": "2",
+      "ids": "id2",
+      "name": "素",
+      "category": a.su
+    }
+    a.realList.push(rous)
+    a.realList.push(sus)
+    console.log("我的数据",a.realList)
   },
 
 
@@ -570,11 +671,6 @@ Page({
     this.setData({
       dibuche:parseInt(this.data.navbarHeight)+parseInt(this.data.cartHeight)
     })
-  },
-  onShow: function () {
-
-    
-
   },
 
   //记录swiper滚动的

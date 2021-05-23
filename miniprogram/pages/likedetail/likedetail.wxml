@@ -31,7 +31,7 @@
                 <!-- 左 -->
                 <scroll-view class='HZL_scroll_left' scroll-with-animation="true" scroll-y="true" style="height:{{HZL_height}}px" scroll-top="{{HZL_leftToTop}}">
                     <view style="padding-bottom: 50rpx;" >
-                      <view HZL_scroll_left_text wx:for="{{constants}}" wx:key="id" bindtap="left" data-id="{{item.id}}" class='{{item.id === HZL_currentLeftSelect ?"HZL_scroll_left_text_active":"HZL_scroll_left_text"}}'>
+                      <view HZL_scroll_left_text wx:for="{{realList}}" wx:key="id" bindtap="left" data-id="{{item.id}}" class='{{item.id === HZL_currentLeftSelect ?"HZL_scroll_left_text_active":"HZL_scroll_left_text"}}'>
                           <view id="{{item.id}}">
                           {{item.name}}
                           </view>
@@ -41,7 +41,7 @@
 
                 <!-- 右 -->
                 <scroll-view scroll-with-animation="true" scroll-y="true" style="height:{{HZL_height}}px"  bindscroll="right" scroll-into-view="{{HZL_toView}}"  class='HZL_scroll_right'>
-                    <view wx:for="{{constants}}"  data-index="" wx:for-index = 'parentIndex' wx:key="id" id="{{item.ids}}" >
+                    <view wx:for="{{realList}}"  data-index="" wx:for-index = 'parentIndex' wx:key="id" id="{{item.ids}}" >
                         <view class="HZL_scroll_right_top">{{item.name}}</view>
                         <view class="HZL_scroll_right_view" wx:for="{{item.category}}" wx:key="goods_id" catchtap="showRule" data-parentIndex='{{parentIndex}}' data-index='{{index}}'>
                                 <view class="shopImg">
