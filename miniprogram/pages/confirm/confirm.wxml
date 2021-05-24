@@ -14,7 +14,7 @@
   </view>
   <view class="FormBox">
     <form>
-      <view class="FormBox1">
+      <!-- <view class="FormBox1">
         <view style="float:left">外卖</view>
         <view style="float:right">
           <switch bindchange="SetWai" />
@@ -46,12 +46,12 @@
             <text style="color:rgb(229, 224, 230)">></text>
           </view>
         </picker>
-      </view>
+      </view> -->
       <view class="section1">
         <view>备注:</view>
         <textarea maxlength='20' adjust-position value="{{TipTxt}}" bindblur="SetValue" />
       </view>
-      <view class="PayButton">
+      <view class="PayButton" bindtap="goMyOrder" data-="{{PayList1}}">
         微信支付
       </view>
     </form>

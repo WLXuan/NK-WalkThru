@@ -4,25 +4,28 @@ Page({
 // 页面的初始数据
   data: {
     isShowUserName: false,
-    userInfo: null,
-    nickName: '',
-    avatar: '',
+    userInfo: '',
     nologin: true
   },
   onGotUserInfo: function(e){
 
   },
   goMyOrder(){
+    wx.navigateTo({
+      url: '/pages/myorder/myorder',
+    })
 
   },
   login(){
     wx.getUserProfile({
       desc: '用于完善用户资料',
       success: res => {
-        // console.log("授权成功",res.userInfo)
+        let user = res.userInfo
+        //缓存用户信息
+        wx.setStorageSync('user', user)
+        console.log("授权成功",res.userInfo)
         this.setData({
-          nickName: res.userInfo.nickName,
-          avatar: res.userInfo.avatarUrl,
+          userInfo: user,
           nologin:false
         })
       },
@@ -30,16 +33,20 @@ Page({
         console.log("授权失败")
       }
     })
+    wx.setStorageSync('flag', 0)
+  },
+  loginout(){
+    this.setData({
+      userInfo:''
+    })
+    wx.setStorageSync('user', '')
   },
 // 生命周期函数--监听页面加载
   onLoad: function (options) {
-    wx.cloud.init()
-    wx.cloud.database().collection('account').get().then(res => {
-      console.log("个人中心", res)
-      this.setData({
-        accountList: res.data
-      })
+    let user = wx.getStorageSync('user')
+    this.setData({
+      userInfo: user,
+      nologin: false
     })
-
   },
 })

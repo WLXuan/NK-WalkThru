@@ -2,10 +2,14 @@
   <view class="HeadImg">
     <image src="{{like.picture}}" style="width:100%;height:100%;background-color:white"></image>
   </view>
-  <text class="ShopName">{{like.name}}</text>
+  <!-- <text class="ShopName">{{like.name}}</text>
   <text class="ShopPay">配送费：¥0.00 餐盒费：¥0.00</text>
   <text class="ShopAddr">地址：广州市xxxx</text>
-  <text class="ShopIntroduce">未填写商铺介绍</text>
+  <text class="ShopIntroduce">未填写商铺介绍</text> -->
+  <text class="ShopName">{{like.name}}</text>
+  <text class="ShopPay">文科食堂</text>
+  <text class="ShopAddr">地址：南开大学津南校区</text>
+  <text class="ShopIntroduce"></text>
 </view>
 <view class="aa">
   <view style="float:left">
@@ -26,7 +30,7 @@
       <view wx:for="{{realFoodList}}" wx:for-index="DadIndex" wx:key="key" class="Box1">
         <view class="title" id="a{{DadIndex}}">{{item.name}}</view>
         <view wx:for="{{item.Food}}" wx:for-item="ChilenIndex" data-food="{{food}}" wx:key="key1" class='under_line'>
-          <image src="{{ChilenIndex.picture}}" class="FoodImg"></image>
+          <image src="{{ChilenIndex.picture}}"  class="FoodImg"></image>
           <view>
             <view class="FoodName">{{ChilenIndex.name}}</view>
             <view class="FoodSold">已售{{ChilenIndex.sold}}</view>

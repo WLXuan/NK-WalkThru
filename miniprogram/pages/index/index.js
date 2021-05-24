@@ -65,7 +65,7 @@ Page({
   },
   getHotList() {
     wx.cloud.database().collection('dish').orderBy("sales", 'desc')
-    .limit(5).get().then(res => {
+    .limit(8).get().then(res => {
       console.log("dish", res)
       this.setData({
         hotList: res.data

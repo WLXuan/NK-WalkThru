@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/likedetail/likedetail",
-    "pages/qingzhendetail/qingzhendetail",
     "pages/dishdetail/dishdetail",
     "pages/wenkedetail/wenkedetail",
     "pages/detail/detail",
@@ -10,7 +9,8 @@
     "pages/shopping/shopping",
     "pages/food/food",
     "pages/hotlist/hotlist",
-    "pages/category/category"
+    "pages/category/category",
+    "pages/myorder/myorder"
   ],
   "window": {
     "backgroundTextStyle": "light",

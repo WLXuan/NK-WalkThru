@@ -1,12 +1,7 @@
-// pages/confirm/confirm.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     PayList1: [],
-      Total:0,
+    Total:0,
     array1: ['楼层一', '楼层二'],
     array2: ['1', '2', '3', '4'],
     array3: ['1', '2', '3', '4','5','6','7','8'],
@@ -14,7 +9,8 @@ Page({
     index2: 0,
     index3: 0,
     wai:0,
-TipTxt:''
+    windowname:'',
+    TipTxt:''
   },
   SetWai(e) {
     if (e.detail.value){
@@ -47,7 +43,18 @@ TipTxt:''
       index3: e.detail.value
     })
   },
+  goMyOrder(e){
+    console.log("gomyorder", e.currentTarget.dataset[""])
+    let l = JSON.stringify(e.currentTarget.dataset[""])
+    let p = this.data.Total
+    let n = this.data.windowname
+    wx.navigateTo({
+      // url: '/pages/confirm/confirm?PayList='+l+'&pay='+p+'&windowname='+n
+      url: '/pages/myorder/myorder?PayList='+l+'&pay='+p+'&windowname='+n
+    })
+  },
   onLoad: function(options) {
+    console.log("传来的数据",options)
     wx.setNavigationBarTitle({
       title: '确认订单',
     })
@@ -59,7 +66,8 @@ TipTxt:''
     let l = JSON.parse(options.PayList)
     this.setData({
       PayList1: l,
-      Total: options.pay
+      Total: options.pay,
+      windowname: options.windowname
     })
     }
 

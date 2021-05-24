@@ -11,7 +11,7 @@
     <swiper autoplay indicator-dots circular interval="3000"
     indicator-active-color="#4b0082">
         <swiper-item wx:for="{{swiperList}}" wx:key="swiper{{index}}" 
-        bindtap="goDetail" data-="{{item}}">
+         data-="{{item}}">
             <image src="{{item.swiper_pic}}" lazy-load></image>
         </swiper-item>
 

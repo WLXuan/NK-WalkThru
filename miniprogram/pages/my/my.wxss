@@ -24,6 +24,16 @@
   height: 50px;
   text-align: center;
 }
+.loginout {
+  align-items: center;
+  border-radius: 30rpx;
+  justify-content: center;
+  display: flex;
+  margin-top: 20px;
+  width: 200px;
+  height: 40px;
+  text-align: center;
+}
 .avatar {
   margin-bottom: 10px;
   width: 200rpx;

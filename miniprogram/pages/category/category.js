@@ -18,9 +18,9 @@ Page({
   },
   goQingzhenDetail(e) {
     console.log("清真食堂", e)
+    let id = 'cbddf0af60ab4bef0b1ebc9a40ef8999'
     wx.navigateTo({
-      // url: '/pages/likedetail/likedetail?=id' + id
-      url: '/pages/qingzhendetail/qingzhendetail'
+      url: '/pages/dishdetail/dishdetail?=id' + id
     })
   },
 

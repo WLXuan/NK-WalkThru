@@ -1,0 +1,26 @@
+<view >
+    <view  class="FoodBox"wx:for="{{paylist1}}">
+      <view class="WindowName">{{item[2]}}</view>
+      <view class="OneOrder" wx:for="{{item[0]}}">
+        <image class="FoodImg" src="{{item.picture}}" ></image>
+          <view  class="texts">
+          <view>
+            <view class="FoodName">{{item.name}}</view>
+            <view class="FoodPay">
+              <text>¥</text> {{item.pay}}</view>
+          </view>
+        
+          <view class="FoodLength">x{{item.Number}}</view>
+
+        </view>
+
+      </view>
+      <view class="WindowName">总计：¥{{item[1]}}</view>
+        
+      
+    </view>
+  </view>
+
+<view class="back" bindtap="backIndex">
+  返回主界面
+</view>

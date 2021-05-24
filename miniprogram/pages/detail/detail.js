@@ -18,7 +18,8 @@ Page({
     winHeight: 0,
     heightArr: [],
     forindex: true,
-    zindex: 0
+    zindex: 0,
+    windowsname:''
   },
   GoPay(){
     if(this.data.PayList.length== 0){
@@ -29,9 +30,10 @@ Page({
     }else{
 
     let l = JSON.stringify(this.data.PayList)
-      let p = this.data.Total
+    let p = this.data.Total
+    let n = this.data.windowsname
     wx.navigateTo({
-      url: '/pages/confirm/confirm?PayList='+l+'&pay='+p
+      url: '/pages/confirm/confirm?PayList='+l+'&pay='+p+'&windowname='+n
     })
     }
 
@@ -116,6 +118,7 @@ Page({
     var num = this.data.realFoodList[parentIndex].Food[index].Number;
     var name = this.data.realFoodList[parentIndex].Food[index].name;
     var Id = this.data.realFoodList[parentIndex].Food[index].FoodId;
+    var pic = this.data.realFoodList[parentIndex].Food[index].picture;
     var obj = {
       pay: price,
       Number: num,
@@ -123,7 +126,8 @@ Page({
       name: name,
       index: index,
       parentIndex: parentIndex,
-      FoodId: Id
+      FoodId: Id,
+      picture:pic
     };
     var carArray1 = this.data.PayList.filter(item => item.mark != mark)
     carArray1.push(obj)
@@ -229,7 +233,8 @@ Page({
     wx.cloud.database().collection('like').doc(id).get().then(rres => {
       console.log("详情页", rres.data.name)
       this.setData({
-        like: rres.data
+        like: rres.data,
+        windowsname: rres.data.name
       })
       win_name = rres.data.name
       console.log("this.winname", win_name)

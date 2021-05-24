@@ -3,9 +3,9 @@
     <image src="{{like.picture}}" style="width:100%;height:100%;background-color:white"></image>
   </view>
   <text class="ShopName">{{like.name}}</text>
-  <text class="ShopPay">配送费：¥0.00 餐盒费：¥0.00</text>
-  <text class="ShopAddr">地址：广州市xxxx</text>
-  <text class="ShopIntroduce">未填写商铺介绍</text>
+  <text class="ShopPay">理科食堂</text>
+  <text class="ShopAddr">地址：南开大学津南校区</text>
+  <text class="ShopIntroduce"></text>
 </view>
 <view class="aa">
   <view style="float:left">
