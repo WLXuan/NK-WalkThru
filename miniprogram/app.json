@@ -38,12 +38,6 @@
         "selectedIconPath": "tabbar/sorted.png"
       },
       {
-        "pagePath": "pages/shopping/shopping",
-        "text": "购物车",
-        "iconPath": "tabbar/appointment.png",
-        "selectedIconPath": "tabbar/appointmented.png"
-      },
-      {
         "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "tabbar/collect.png",
